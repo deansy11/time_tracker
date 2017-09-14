@@ -1,5 +1,5 @@
 class Developer < ApplicationRecord
-  belongs_to :project
+  has_and_belongs_to_many :projects
   has_many :time_entries
 
   accepts_nested_attributes_for :project, :reject_if => :all_blank
