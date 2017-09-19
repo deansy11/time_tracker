@@ -1,2 +1,24 @@
-<h1>Developers#index</h1>
-<p>Find me in app/views/developers/index.html.erb</p>
+<h1>Developers Index</h1>
+<h2>These are your developers</h2>
+<td class="button"><%= link_to 'Add a Developer', new_developer_path %></td>
+
+<table>
+  <thead>
+    <tr>
+      <th class="headers">Developer Name</th>
+      <th class="headers">Email</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+    <tbody>
+        <% @developers.each do |developer| %>
+          <tr class="body">
+            <td><%= developer.name %></td>
+            <td><%= developer.email %></td>
+            <td class="button"><%= link_to 'Show', developer %></td>
+            <td class="button"><%= link_to 'Edit', edit_developer_path(developer) %></td>
+            <td class="button"><%= link_to 'Destroy', developer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          </tr>
+        <% end %>
+    </tbody>
+</table>

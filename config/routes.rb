@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   get 'projects/index'
   get 'developers/index'
 
-  root to: 'projects#index'
+  root to: 'developers#index'
 
   resources :projects
   resources :developers do
