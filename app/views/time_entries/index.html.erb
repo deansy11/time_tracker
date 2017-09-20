@@ -14,8 +14,8 @@
     <tbody>
         <% @time_entries.each do |entry| %>
           <tr class="body">
-            <td><%= entry.name %></td>
-            <td><%= entry.description %></td>
+            <td><%= entry.entry %></td>
+            <td><%= entry.date_field %></td>
             <td class="button"><%= link_to 'Show', entry %></td>
             <td class="button"><%= link_to 'Edit', edit_time_entry_path(entry) %></td>
             <td class="button"><%= link_to 'Destroy', entry, method: :delete, data: { confirm: 'Are you sure?' } %></td>
