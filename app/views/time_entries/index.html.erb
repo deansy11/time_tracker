@@ -1,6 +1,7 @@
 <h1>Time Entries Index</h1>
 <h2>Herea are your entries:</h2>
 <td class="button"><%= link_to 'Add a Time Entry', new_time_entry_path %></td>
+<%= link_to "Log Out", session_path, method: :delete %>
 
 <table>
   <thead>

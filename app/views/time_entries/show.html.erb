@@ -1,6 +1,8 @@
 <p id="notice"><%= notice %></p>
 <h2>New Time Entry</h2>
 
+<%= link_to "Log Out", session_path, method: :delete %>
+
 <p>
   <strong>Duration:</strong>
   <%= @time_entry.entry %>
