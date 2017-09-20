@@ -13,8 +13,10 @@ class DevelopersController < ApplicationController
 
   def create
     @developer = Developer.new(developer_params)
-      if @developer.save
-        redirect_to @developer
+
+    if @developer.save
+      session[:developer_id] = @developer.id
+      redirect_to root_path @developer
       else
         render 'new'
       end
