@@ -20,12 +20,12 @@ class DevelopersController < ApplicationController
       end
   end
 
-  # def destroy
-  #   @developer = Developer.destroy(params[:id])
-  #   respond_to do |format|
-  #     format.html { redirect_to developers_path }
-  #   end
-  # end
+  def destroy
+    @developer = Developer.destroy(params[:id])
+    respond_to do |format|
+      format.html { redirect_to developers_path }
+    end
+  end
 
   private
 
