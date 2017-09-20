@@ -6,6 +6,8 @@ class Developer < ApplicationRecord
 
   accepts_nested_attributes_for :time_entries, :reject_if => :all_blank
 
+  accepts_nested_attributes_for :developers_projects, :reject_if => :all_blank
+
   validates :email,
     uniqueness: true,
     format: { with: /\A[^@\s]+@([^@\s]+\.)+[^@\s]+\z/ }

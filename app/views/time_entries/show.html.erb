@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Duration:</strong>
+  <%= @time_entry.entry %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @time_entry.date_field %>
+</p>
+
+<p>
+  <strong>Developer:</strong>
+  <%= @time_entry.developer.name %>
+</p>
+
+
+<%= link_to 'Edit', edit_time_entry_path(@time_entry) %> |
+<%= link_to 'Back', root_path %>
