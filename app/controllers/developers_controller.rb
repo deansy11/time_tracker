@@ -16,7 +16,7 @@ class DevelopersController < ApplicationController
 
     if @developer.save
       session[:developer_id] = @developer.id
-      redirect_to root_path @developer
+      redirect_to developers_path @developer
       else
         render 'new'
       end
@@ -32,7 +32,7 @@ class DevelopersController < ApplicationController
   private
 
     def developer_params
-      params.require(:developer).permit(:name, :email, :id, :password_digest, projects_attributes: [:name, :description], time_entries_attributes: [:entry, :date_field], developers_projects_attributes: [:developer_id])
+      params.require(:developer).permit(:name, :email, :id, :password_digest, :password_confirmation, projects_attributes: [:name, :description], time_entries_attributes: [:entry, :date_field], developers_projects_attributes: [:developer_id])
   end
 
 end

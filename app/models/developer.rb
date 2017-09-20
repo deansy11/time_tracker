@@ -8,6 +8,7 @@ class Developer < ApplicationRecord
 
   accepts_nested_attributes_for :developers_projects, :reject_if => :all_blank
 
+  has_secure_password
   validates :email,
     uniqueness: true,
     format: { with: /\A[^@\s]+@([^@\s]+\.)+[^@\s]+\z/ }

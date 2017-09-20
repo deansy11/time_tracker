@@ -5,7 +5,7 @@ class SessionsController < ApplicationController
   def create
     developer = Developer.find_by_email(params[:email])
 
-    if developer && developer.authenticate(params[:password])
+    if @developer && developer.authenticate(params[:password_digest])
       session[:developer_id] = developer.id
       redirect_to developers_path
     else
