@@ -20,9 +20,14 @@
     <%= f.label :date %>
     <%= f.date_field :date_field, id: :time_entry_date_field %>
   </div>
-  <br>
+
+  <div class="field">
+    <%= f.label :developer %>
+    <%= f.collection_select :developer_id, Developer.all, :id, :name %>
+  </div>
+
   <div class="actions">
-    <%= f.submit 'Create Project' %>
+    <%= f.submit 'Create Time Entry' %>
   </div>
   <br>
 <% end %>
