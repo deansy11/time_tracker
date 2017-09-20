@@ -7,8 +7,8 @@ Rails.application.routes.draw do
   root to: 'developers#index'
 
   resources :projects
-  resources :developers do
-    resources :time_entries
-  end
+  resources :developers
+  resources :time_entries
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

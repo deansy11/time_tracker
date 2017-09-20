@@ -1,18 +1,18 @@
 class TimeEntriesController < ApplicationController
   def index
-    @time_entries = Time_entry.all
+    @time_entries = TimeEntry.all
   end
 
   def new
-    @time_entry = Time_entry.new
+    @time_entry = TimeEntry.new
   end
 
   def show
-    @time_entry = Time_entry.find(params[:id])
+    @time_entry = TimeEntry.find(params[:id])
   end
 
   def create
-    @time_entry = Time_entry.new(time_entry_params)
+    @time_entry = TimeEntry.new(time_entry_params)
       if @time_entry.save
         redirect_to @time_entry
       else
@@ -21,7 +21,7 @@ class TimeEntriesController < ApplicationController
   end
 
   def destroy
-    @time_entry = Time_entry.destroy(params[:id])
+    @time_entry = TimeEntry.destroy(params[:id])
     respond_to do |format|
       format.html { redirect_to time_entries_path }
     end
