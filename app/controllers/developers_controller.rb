@@ -1,4 +1,5 @@
 class DevelopersController < ApplicationController
+
   def index
     @developers = Developer.all
   end
@@ -30,6 +31,8 @@ class DevelopersController < ApplicationController
   end
 
   private
+
+
 
     def developer_params
       params.require(:developer).permit(:name, :email, :id, :password_digest, :password_confirmation, projects_attributes: [:name, :description], time_entries_attributes: [:entry, :date_field], developers_projects_attributes: [:developer_id])

@@ -1,6 +1,6 @@
 <h1>Create a New Time Entry</h1>
 
-<%= render 'form' %>
+<%= render 'form', time_entry: @time_entry, developer: @developer %>
 
 <%= link_to 'Developer Index', developers_path %>
 <%= link_to "Log Out", session_path, method: :delete %>
