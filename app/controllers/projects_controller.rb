@@ -1,6 +1,7 @@
 class ProjectsController < ApplicationController
   def index
     @projects = Project.all
+    @developer = current_developer.id
   end
 
   def new
@@ -34,7 +35,7 @@ class ProjectsController < ApplicationController
 private
 
   def project_params
-    params.require(:project).permit(:name, :description, developers_attributes: [:id, :name, :email], time_entries_attributes: [:entry])
+    params.require(:project).permit(:name, :description, developers_attributes: [:id, :name, :email], time_entries_attributes: [:entry], developers_projects_attributes: [:developer_id, :project_id])
   end
 
 end

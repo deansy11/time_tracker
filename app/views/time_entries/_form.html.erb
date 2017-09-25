@@ -21,8 +21,15 @@
     <%= f.date_field :date_field, id: :time_entry_date_field %>
   </div>
 
+  <div class="field">
+    <%= f.label :project %>
+    <%= f.collection_select :project_id, Project.all, :id, :name %>
+  </div>
+
   <div class="actions">
     <%= f.submit 'Create Time Entry' %>
   </div>
   <br>
 <% end %>
+
+<%= link_to 'View All Projects', projects_path %>

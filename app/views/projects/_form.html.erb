@@ -16,10 +16,6 @@
     <%= f.text_field :name, id: :project_name %>
   </div>
 
-  <div class="field">
-    <%= f.label :description %>
-    <%= f.text_area :description, id: :project_description %>
-  </div>
   <br>
   <div class="actions">
     <%= f.submit 'Create Project' %>
@@ -28,3 +24,4 @@
 <% end %>
 
 <%= link_to 'Back', root_path %>
+<%= link_to 'Create a Time Entry', new_developer_time_entry_path(@developers) %>
