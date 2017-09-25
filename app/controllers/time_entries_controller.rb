@@ -1,5 +1,5 @@
 class TimeEntriesController < ApplicationController
-  before_action :set_time_entry, only: [:index, :edit, :destroy]
+  before_action only: [:index, :edit, :destroy]
   before_action :authenticate_developer!
 
   def index
@@ -15,6 +15,11 @@ class TimeEntriesController < ApplicationController
   def show
     @time_entry = TimeEntry.find(params[:id])
     @developer = current_developer
+  end
+
+  def edit
+    @developer = Developer.find(params[:developer_id])
+    @time_entry = TimeEntry.find(params[:id])
   end
 
   def create
