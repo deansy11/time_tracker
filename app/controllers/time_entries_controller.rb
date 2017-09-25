@@ -1,11 +1,13 @@
 class TimeEntriesController < ApplicationController
   def index
-    @time_entries = TimeEntry.all
+    @developer = current_developer
+    @current_developer = @developer.id
+    @time_entries = @developer.time_entries
   end
 
   def new
     @time_entry = TimeEntry.new
-    @developer = Developer.find(params[:developer_id])
+    @developer = current_developer
   end
 
   def show

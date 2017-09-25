@@ -1,6 +1,6 @@
 <h1>Time Entries Index</h1>
-<h2>Herea are your entries:</h2>
-<td class="button"><%= link_to 'Add a Time Entry', new_time_entry_path %></td>
+<h2>Here are your entries:</h2>
+<td class="button"><%= link_to 'Add a Time Entry', new_developer_time_entry_path %></td>
 <%= link_to "Log Out", session_path, method: :delete %>
 
 <table>
@@ -16,11 +16,11 @@
         <% @time_entries.each do |entry| %>
           <tr class="body">
             <td><%= entry.entry %></td>
-            <td><%= entry.date_field %></td>
-            <td><%= entry.developer_name %></td>
-            <td class="button"><%= link_to 'Show', entry %></td>
-            <td class="button"><%= link_to 'Edit', edit_time_entry_path(entry) %></td>
-            <td class="button"><%= link_to 'Destroy', entry, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            <td><%= entry.date_field%></td>
+            <td><%= entry.developer %></td>
+            <td class="button"><%= link_to 'Show', developer_time_entry_path(@current_developer, @time_entries) %></td>
+            <td class="button"><%= link_to 'Edit', edit_developer_time_entry_path(@current_developer, @time_entries) %></td>
+            <td class="button"><%= link_to 'Destroy', developer_time_entry_path(@current_developer, @time_entries), method: :delete, data: { confirm: 'Are you sure?' } %></td>
           </tr>
         <% end %>
     </tbody>
