@@ -33,9 +33,10 @@ class TimeEntriesController < ApplicationController
   end
 
   def destroy
+    @developer = Developer.find(params[:developer_id])
     @time_entry = TimeEntry.destroy(params[:id])
     respond_to do |format|
-      format.html { redirect_to time_entries_path }
+      format.html { redirect_to developer_time_entries_path(@developer) }
     end
   end
 
