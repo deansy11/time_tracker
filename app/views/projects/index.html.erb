@@ -6,8 +6,7 @@
 <table>
   <thead>
     <tr>
-      <th class="headers">Recipe Name</th>
-      <th class="headers">Directions</th>
+      <th class="headers">Project Name</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -15,7 +14,6 @@
         <% @projects.each do |project| %>
           <tr class="body">
             <td><%= project.name %></td>
-            <td><%= project.description %></td>
             <td class="button"><%= link_to 'Show', project %></td>
             <td class="button"><%= link_to 'Edit', edit_project_path(project) %></td>
             <td class="button"><%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %></td>
