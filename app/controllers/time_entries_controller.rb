@@ -5,6 +5,7 @@ class TimeEntriesController < ApplicationController
 
   def new
     @time_entry = TimeEntry.new
+    @developer = Developer.find(params[:developer_id])
   end
 
   def show
@@ -12,7 +13,7 @@ class TimeEntriesController < ApplicationController
   end
 
   def create
-    @developer - Developer.find(params[:developer_id])
+    @developer = current_developer
     @time_entry = TimeEntry.new(time_entry_params)
       if @time_entry.save
         redirect_to @time_entry
