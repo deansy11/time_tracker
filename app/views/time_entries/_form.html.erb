@@ -1,4 +1,4 @@
-<%= form_with(model: @developer_time_entry, local: true) do |f| %>
+<%= form_with(model: [developer, time_entry], local: true) do |f| %>
   <% if @time_entry.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@time_entry.errors.count, "error") %> prohibited this time_entry from being saved:</h2>
@@ -19,11 +19,6 @@
   <div class="field">
     <%= f.label :date %>
     <%= f.date_field :date_field, id: :time_entry_date_field %>
-  </div>
-
-  <div class="field">
-    <%= f.label :developer %>
-    <%= f.collection_select :developer_id, Developer.all, :id, :name %>
   </div>
 
   <div class="actions">
