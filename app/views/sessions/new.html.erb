@@ -3,6 +3,7 @@
 <% if current_developer %>
   You are now logged in as: <%= current_developer.name %> .
   <%= link_to "Log Out", session_path, method: :delete %>.
+  <%= link_to "Developer Page", developers_path %>
 <% else %>
   You are not logged in. Need an account? <%= link_to "Sign up", new_developer_path %>.
 <% end %>

@@ -23,6 +23,10 @@ class DevelopersController < ApplicationController
       end
   end
 
+  def edit
+    @developer = Developer.find(params[:id])
+  end
+
   def destroy
     @developer = Developer.destroy(params[:id])
     respond_to do |format|

@@ -10,6 +10,7 @@ class TimeEntriesController < ApplicationController
 
   def show
     @time_entry = TimeEntry.find(params[:id])
+    @developer = current_developer
   end
 
   def create

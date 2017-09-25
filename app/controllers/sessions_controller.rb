@@ -1,6 +1,6 @@
 class SessionsController < ApplicationController
   def index
-    #code
+
   end
 
   def new
