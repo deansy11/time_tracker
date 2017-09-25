@@ -43,7 +43,7 @@ class TimeEntriesController < ApplicationController
   private
 
     def time_entry_params
-      params.require(:time_entry).permit(:entry, :date_field, :developer_id, projects_attributes: [:name, :description], developers_attributes: [:id, :name, :email], developers_projects_attributes: [:developer_id])
+      params.require(:time_entry).permit(:entry, :date_field, :developer_id, :project_id, projects_attributes: [:name, :description], developers_attributes: [:id, :name, :email], developers_projects_attributes: [:developer_id, :project_id])
   end
 
 end
