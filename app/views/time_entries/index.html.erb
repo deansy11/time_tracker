@@ -6,9 +6,9 @@
 <table>
   <thead>
     <tr>
-      <th class="headers">Developer</th>
       <th class="headers">Duration</th>
       <th class="headers">Date</th>
+      <th class="headers">Developer</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -17,10 +17,7 @@
           <tr class="body">
             <td><%= entry.entry %></td>
             <td><%= entry.date_field%></td>
-            <td><%= entry.developer %></td>
-            <td class="button"><%= link_to 'Show', developer_time_entry_path(@current_developer, @time_entries) %></td>
-            <td class="button"><%= link_to 'Edit', edit_developer_time_entry_path(@current_developer, @time_entries) %></td>
-            <td class="button"><%= link_to 'Destroy', developer_time_entry_path(@current_developer, @time_entries), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            <td><%= entry.developer.name %></td>
           </tr>
         <% end %>
     </tbody>
