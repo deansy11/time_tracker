@@ -18,6 +18,12 @@
   <%= @time_entry.developer.name %>
 </p>
 
+<p>
+  <strong>Project:</strong>
+  <%= @time_entry.project %>
+</p>
+
+
 
 <%= link_to 'Back to Developers', developers_path %>
 <%= link_to "View All Your Time Entries", developer_time_entries_path(@developer) %>
