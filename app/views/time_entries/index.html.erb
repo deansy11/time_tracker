@@ -18,6 +18,8 @@
             <td><%= entry.entry %></td>
             <td><%= entry.date_field%></td>
             <td><%= entry.developer.name %></td>
+            <td class="button"><%= link_to 'Edit', edit_developer_time_entry_path(@developer, entry) %></td>
+            <td class="button"><%= link_to 'Destroy', developer_time_entry_path(@developer, entry), method: :delete, data: { confirm: 'Are you sure?' } %></td>
           </tr>
         <% end %>
     </tbody>
