@@ -1,24 +1,9 @@
 # Time-Tracker
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+An application that helps manage employer time. Time-Tracker keeps track of all projects and developers within an organization, as well as all time put towards projects by each developer.
 
-Things you may want to cover:
+Built Using: 
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Ruby-on-Rails
+* SQLite3
+* ActiveRecord
