@@ -4,6 +4,6 @@ An application that helps manage employer time. Time-Tracker keeps track of all 
 
 Built Using: 
 
-* Ruby-on-Rails
+* Ruby-on-Rails (v. 5.1.3)
 * SQLite3
 * ActiveRecord
